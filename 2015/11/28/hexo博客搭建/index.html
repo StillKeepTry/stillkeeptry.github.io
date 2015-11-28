@@ -1,130 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>hexo博客搭建 | StillKeepTry</title>
-  <meta name="viewport" content="width=device-width">
-  <meta name="description" content="wordpress感觉更适合用来发一些日志啊,什么传记之类的文章.技术性的文章还是得markdown+latex这种完美支持的才好.来爽爽hexo+github.io的使用">
-<meta property="og:type" content="article">
-<meta property="og:title" content="hexo博客搭建">
-<meta property="og:url" content="http://stillkeeptry.github.io/2015/11/28/hexo博客搭建/index.html">
-<meta property="og:site_name" content="StillKeepTry">
-<meta property="og:description" content="wordpress感觉更适合用来发一些日志啊,什么传记之类的文章.技术性的文章还是得markdown+latex这种完美支持的才好.来爽爽hexo+github.io的使用">
-<meta property="og:updated_time" content="2015-11-28T15:32:34.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo博客搭建">
-<meta name="twitter:description" content="wordpress感觉更适合用来发一些日志啊,什么传记之类的文章.技术性的文章还是得markdown+latex这种完美支持的才好.来爽爽hexo+github.io的使用">
-  
-    <link rel="alternative" href="/atom.xml" title="StillKeepTry" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  
-</head>
-<body>
-  <div id="container">
-    <div class="mobile-nav-panel">
-	<i class="icon-reorder icon-large"></i>
-</div>
-<header id="header">
-	<h1 class="blog-title">
-		<a href="/">StillKeepTry</a>
-	</h1>
-	<nav class="nav">
-		<ul>
-			<li><a href="/">Home</a></li><li><a href="/archives">Archives</a></li>
-			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
-			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
-		</ul>
-	</nav>
-	<div id="search-form-wrap">
-		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://stillkeeptry.github.io"></form>
-	</div>
-</header>
-    <div id="main">
-      <article id="post-hexo博客搭建" class="post">
-	<footer class="entry-meta-header">
-		<span class="meta-elements date">
-			<a href="/2015/11/28/hexo博客搭建/" class="article-date">
-  <time datetime="2015-11-28T15:23:41.000Z" itemprop="datePublished">2015-11-28</time>
-</a>
-		</span>
-		<span class="meta-elements author">skt</span>
-		<div class="commentscount">
-			
-		</div>
-	</footer>
-	
-	<header class="entry-header">
-		
-  
-    <h1 class="article-title entry-title" itemprop="name">
-      hexo博客搭建
-    </h1>
-  
+extends base
 
-	</header>
-	<div class="entry-content">
-		
-    	<p>wordpress感觉更适合用来发一些日志啊,什么传记之类的文章.技术性的文章还是得markdown+latex这种完美支持的才好.来爽爽hexo+github.io的使用</p>
+block title
+  title= page.title + " | " + config.title
 
-    
-	</div>
-	<footer class="entry-footer">
-		<div class="entry-meta-footer">
-			<span class="category">
-				
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/初学之道/">初学之道</a>
-  </div>
+block content
+  .post.post-page
+    h1.post-title= page.title
+    .post-meta= page.date.format(config.date_format) + " | "
+      if page.categories.length > 0
+        span.categories= __('belongsto')
+          for category in page.categories.toArray()
+            a(href=url_for(category.path))= category.name
+    if theme.duoshuo
+      span.ds-thread-count(data-thread-key=page.path)
+    if theme.disqus
+      span.disqus-comment-count(data-disqus-identifier=page.path)
+    if page.toc
+      div(class="clear")
+        div(id="toc" class="toc-article")
+          div(class="toc-title")= __('contents')
+          != toc(page.content)
+    .post-content
+      != page.content
+    if page.tags
+      .tags
+        for tag in page.tags.toArray()
+          a(href=url_for(tag.path))= tag.name
+    include _partial/post-nav
+    if theme.duoshuo
+      div(class='ds-share flat' data-thread-key=page.path, data-title=page.title, data-url=page.permalink)
+         .ds-share-inline
+            ul.ds-share-icons-16
+              li(data-toggle='ds-share-icons-more')
+                a(class='ds-more' href='javascript:void(0);') 分享到：
+              li
+                a(class='ds-weibo' href='javascript:void(0);' data-service='weibo') 微博
+              li
+                a(class='ds-qzone' href='javascript:void(0);' data-service='qzone') QQ空间
+              li
+                a(class='ds-qqt' href='javascript:void(0);' data-service='qqt') 腾讯微博
+              li
+                a(class='ds-wechat' href='javascript:void(0);' data-service='wechat') 微信
+            .ds-share-icons-more
 
-			</span>
-			<span class="tags">
-				
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客乱搞/">博客乱搞</a></li></ul>
-
-			</span>
-		</div>
-	</footer>
-	
-    
-  
-</article>
-
-
-
-
-    </div>
-    <div class="mb-search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:stillkeeptry.github.io">
-  </form>
-</div>
-<footer id="footer">
-	<h1 class="footer-blog-title">
-		<a href="/">StillKeepTry</a>
-	</h1>
-	<span class="copyright">
-		&copy; 2015 skt<br>
-		Modify from <a href="http://sanographix.github.io/tumblr/apollo/" target="_blank">Apollo</a> theme, designed by <a href="http://www.sanographix.net/" target="_blank">SANOGRAPHIX.NET</a><br>
-		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-	</span>
-</footer>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js" type="text/javascript"></script>
-  </div>
-</body>
-</html>
+    include _partial/comments
