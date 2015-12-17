@@ -51,16 +51,16 @@
 
 
 
-<meta name="description" content="什么是遗传算法?">
+<meta name="description" content="为什么写这个,其实算法挺简单,只不过最优化算法那儿还有很多要学习的地方.之所以写这个,是为了交作业…">
 <meta property="og:type" content="article">
 <meta property="og:title" content="遗传算法解决N皇后">
 <meta property="og:url" content="http://stillkeeptry.github.io/2015/12/09/遗传算法解决N皇后/index.html">
 <meta property="og:site_name" content="StillKeepTry">
-<meta property="og:description" content="什么是遗传算法?">
-<meta property="og:updated_time" content="2015-12-09T10:16:04.000Z">
+<meta property="og:description" content="为什么写这个,其实算法挺简单,只不过最优化算法那儿还有很多要学习的地方.之所以写这个,是为了交作业…">
+<meta property="og:updated_time" content="2015-12-17T09:32:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="遗传算法解决N皇后">
-<meta name="twitter:description" content="什么是遗传算法?">
+<meta name="twitter:description" content="为什么写这个,其实算法挺简单,只不过最优化算法那儿还有很多要学习的地方.之所以写这个,是为了交作业…">
 
 
 
@@ -267,8 +267,41 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="什么是遗传算法?">什么是遗传算法?</h2><a id="more"></a>
-<p>遗传算法是模仿自然界生物进化机制发展起来的随机全局搜索和优化方法,它借鉴了达尔文的进化论和孟德尔的遗传学说.</p>
+        <span itemprop="articleBody"><blockquote>
+<p>为什么写这个,其实算法挺简单,只不过最优化算法那儿还有很多要学习的地方.之所以写这个,是为了交作业…</p>
+</blockquote>
+<a id="more"></a>
+<h2 id="什么是遗传算法?">什么是遗传算法?</h2><blockquote>
+<p>遗传算法,正如其名,让程序遗传基因,并进化.让其往最优方向收敛,进化.通过每代的进化,使得基因不停的变好</p>
+</blockquote>
+<h2 id="遗传算法步骤">遗传算法步骤</h2><blockquote>
+<ol>
+<li>确定染色体的构成形式和染色体的适应度,以及生成第一批种群</li>
+<li>现有种群繁衍下一代,繁衍的过程就是通过交换一些序列.并且可以加入一些新的单体.</li>
+<li>对于繁衍的下一代,选择一部分,进行一些变异,这样保证了不会只根据初代种群进行繁衍了.</li>
+<li>优胜劣汰,这一代中的人,采用的选择出下一代的方法.方法很多.</li>
+<li>迭代进化</li>
+</ol>
+</blockquote>
+<h2 id="遗传算法的注意点">遗传算法的注意点</h2><blockquote>
+<ol>
+<li>不同的问题,染色体的编码都会有所不同,适应度函数也会不同</li>
+<li>交换方式,应该是可以根据染色体的特性,来选择比较好的交叉方式.当然,随机的交叉方式是比较常见的.</li>
+<li>变异, 随机的选取一到两个基因变化</li>
+<li>选择,不建议采用随机,收敛不好,可以尝试一些能够体现优胜劣汰的选择方法</li>
+</ol>
+<p>基本上遗传算法的改进点,就在上面四个,感觉有点像学习的雏形,不过还是有点篇AI的思想.</p>
+</blockquote>
+<h2 id="解决N皇后">解决N皇后</h2><blockquote>
+<p>基本算法步骤就像上面所说的</p>
+<ol>
+<li>染色体的编码: 采用1~N的排列</li>
+<li>染色体的适应度: a. 与其他皇后不冲突的个数, b. 任意两対皇后之间不冲突的个数</li>
+<li>交叉: 采用的随机方案进行基因之间的交换.</li>
+<li>选择: 我采用的是将其分组,每组采取竞争的方式,选出一个到下一代</li>
+</ol>
+<p>代码链接(太长不放了): <a href="http://paste.ubuntu.com/14072002/" target="_blank" rel="external">Code</a></p>
+</blockquote>
 </span>
       
     </div>
@@ -436,7 +469,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是遗传算法?"><span class="nav-number">1.</span> <span class="nav-text">什么是遗传算法?</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是遗传算法?"><span class="nav-number">1.</span> <span class="nav-text">什么是遗传算法?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遗传算法步骤"><span class="nav-number">2.</span> <span class="nav-text">遗传算法步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遗传算法的注意点"><span class="nav-number">3.</span> <span class="nav-text">遗传算法的注意点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决N皇后"><span class="nav-number">4.</span> <span class="nav-text">解决N皇后</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
