@@ -51,16 +51,16 @@
 
 
 
-<meta name="description">
+<meta name="description" content="从夏睿老师的讲义中学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习 -- 逻辑回归">
 <meta property="og:url" content="http://stillkeeptry.github.io/2015/12/28/机器学习-逻辑回归/index.html">
 <meta property="og:site_name" content="StillKeepTry">
-<meta property="og:description">
-<meta property="og:updated_time" content="2015-12-28T07:46:28.000Z">
+<meta property="og:description" content="从夏睿老师的讲义中学习">
+<meta property="og:updated_time" content="2015-12-29T14:25:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习 -- 逻辑回归">
-<meta name="twitter:description">
+<meta name="twitter:description" content="从夏睿老师的讲义中学习">
 
 
 
@@ -267,7 +267,46 @@
       
 
       
-        <span itemprop="articleBody"><a id="more"></a>
+        <span itemprop="articleBody"><p>从夏睿老师的讲义中学习</p>
+<a id="more"></a>
+<h3 id="定义">定义</h3><blockquote>
+<p>逻辑回归实际上是一个分类模型,但同时也被称为回归.<br>逻辑回归是一个二分类模型<br>逻辑回归是线性分类模型</p>
+</blockquote>
+<h3 id="模型描述">模型描述</h3><blockquote>
+<p><strong>假设</strong>: </p>
+<blockquote>
+<p>$P(y = 1 | x; k) = h_k(x)=g({k}^T x) = \frac{1}{1+e^{-k^T x}}$</p>
+<p>$P(y = 0 | x; k) = 1 - h_k(x)$</p>
+</blockquote>
+<p><strong>联合形式</strong>:</p>
+<blockquote>
+<p>$P(y | x; k) = {(h_k(x)) ^ {y}} {(1 - h_k (x))^{1-y}}$</p>
+</blockquote>
+<p><strong>参数</strong>: $k$</p>
+</blockquote>
+<h3 id="最大似然估计">最大似然估计</h3><blockquote>
+<p><strong>条件似然</strong></p>
+<blockquote>
+<p>$L(k) = P(\overrightarrow{y}| X ; k)$</p>
+<p>$L(k) = \prod_{i=1}^m p(y^{(i)} | x^{(i)} ; k)$</p>
+<p>$L(k) = \prod_{i=1}^m (h_k(x^{(i)})^{y^{(i)}}) (1 - h_k(x^{(i)})^{1 - y^{(i)}})$</p>
+</blockquote>
+<p><strong>log 似然(交叉熵代价函数)</strong></p>
+<blockquote>
+<p>$\gamma (k) = \log L(k)$</p>
+<p>$\gamma (k) = \sum_{i=1}^{m} y^{(i)}\log(h_k(x^{(i)}) + (1- y^{(i)})\log(1 - h_k(x^{(i)}))$</p>
+<p>$argmin \sum_{i=1}^{m} y^{(i)}\log(h_k(x^{(i)}) + (1- y^{(i)})\log(1 - h_k(x^{(i)}))$</p>
+</blockquote>
+</blockquote>
+<h3 id="常用的优化方法">常用的优化方法</h3><blockquote>
+<ul>
+<li>梯度下降(Gradient Descent)</li>
+<li>随机梯度下降(Stochastic Gradient Descent)</li>
+<li>牛顿法(Newton Method)</li>
+<li>拟牛顿法(Quasi-Newton Method)</li>
+<li>共轭梯度(Conjugate Gradient)</li>
+</ul>
+</blockquote>
 </span>
       
     </div>
@@ -437,7 +476,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目錄</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型描述"><span class="nav-number">2.</span> <span class="nav-text">模型描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最大似然估计"><span class="nav-number">3.</span> <span class="nav-text">最大似然估计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用的优化方法"><span class="nav-number">4.</span> <span class="nav-text">常用的优化方法</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
