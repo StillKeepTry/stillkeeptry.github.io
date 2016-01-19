@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -51,17 +51,16 @@
 
 
 
-<meta name="description" content="wordpress感觉更适合用来发一些日志啊,什么传记之类的文章.技术性的文章还是得markdown+latex这种完美支持的才好.来爽爽hexo+github.io的使用.先写第一篇,当做helloworld吧.">
+<meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo博客搭建">
-<meta property="og:url" content="http://stillkeeptry.github.io/2015/11/28/hexo博客搭建/index.html">
+<meta property="og:title" content="机器学习 -- 支持向量机">
+<meta property="og:url" content="http://stillkeeptry.github.io/2016/01/19/机器学习-支持向量机/index.html">
 <meta property="og:site_name" content="StillKeepTry">
-<meta property="og:description" content="wordpress感觉更适合用来发一些日志啊,什么传记之类的文章.技术性的文章还是得markdown+latex这种完美支持的才好.来爽爽hexo+github.io的使用.先写第一篇,当做helloworld吧.">
-<meta property="og:image" content="http://stillkeeptry.github.io/images/avatar.jpg">
-<meta property="og:updated_time" content="2015-12-17T09:41:55.000Z">
+<meta property="og:description">
+<meta property="og:updated_time" content="2016-01-19T06:08:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo博客搭建">
-<meta name="twitter:description" content="wordpress感觉更适合用来发一些日志啊,什么传记之类的文章.技术性的文章还是得markdown+latex这种完美支持的才好.来爽爽hexo+github.io的使用.先写第一篇,当做helloworld吧.">
+<meta name="twitter:title" content="机器学习 -- 支持向量机">
+<meta name="twitter:description">
 
 
 
@@ -73,7 +72,7 @@
   };
 </script>
 
-  <title> hexo博客搭建 | StillKeepTry </title>
+  <title> 机器学习 -- 支持向量机 | StillKeepTry </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -213,7 +212,7 @@
             
             
               
-                hexo博客搭建
+                机器学习 -- 支持向量机
               
             
           </h1>
@@ -222,34 +221,19 @@
         <div class="post-meta">
           <span class="post-time">
             發表於
-            <time itemprop="dateCreated" datetime="2015-11-28T23:23:41+08:00" content="2015-11-28">
-              2015-11-28
+            <time itemprop="dateCreated" datetime="2016-01-19T14:08:37+08:00" content="2016-01-19">
+              2016-01-19
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/初学之道/" itemprop="url" rel="index">
-                    <span itemprop="name">初学之道</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/28/hexo博客搭建/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/11/28/hexo博客搭建/" itemprop="commentsCount"></span>
+              <a href="/2016/01/19/机器学习-支持向量机/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/19/机器学习-支持向量机/" itemprop="commentsCount"></span>
               </a>
             </span>
             
@@ -268,58 +252,24 @@
       
 
       
-        <span itemprop="articleBody"><p><code>wordpress</code>感觉更适合用来发一些日志啊,什么传记之类的文章.技术性的文章还是得<code>markdown+latex</code>这种完美支持的才好.来爽爽<code>hexo+github.io</code>的使用.先写第一篇,当做helloworld吧.</p>
-<a id="more"></a>
-<hr>
-<h2 id="hexo安装">hexo安装</h2><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo</a> 的安装需要先安装npm,利用npm来安装hexo.npm不需要我多介绍了吧</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
-<p>之后的需要依赖node.js,貌似系统apt-get安装的node不太对,所以采用以下方式</p>
-<p><strong>cURL:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://raw.github.com/creationix/nvm/master/install.sh | sh</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="hexo建站">hexo建站</h2><p>安装 Hexo 完成后,请执行下列命令,Hexo 将会在指定文件夹中新建所需要的文件.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ <span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<p>新建完成后,文件夹目录如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure></p>
-<hr>
-<h2 id="目录文件说明">目录文件说明</h2><h3 id="_config-yml">_config.yml</h3><p>网站的 <a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">配置</a> 信息,您可以在此配置大部分的参数.</p>
-<h3 id="package-json">package.json</h3><p>应用程序的信息. EJS, Stylus 和 Markdown renderer 已默认安装,您可以自由移除.</p>
-<h3 id="scaffolds">scaffolds</h3><p> <a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="external">模板</a> 文件夹. hexo根据scaffold来建立文件.</p>
-<h3 id="source">source</h3><p>资源文件夹是存放用户资源的地方<br>插入图片可以采用<code>![](/images/avatar.jpg)</code></p>
-<p><img src="/images/avatar.jpg" alt=""></p>
-<h3 id="themes">themes</h3><p> <a href="https://hexo.io/zh-cn/docs/themes.html" target="_blank" rel="external">主题</a> 文件夹</p>
-<hr>
-<h2 id="博客已经完成的和待完成的">博客已经完成的和待完成的</h2><h3 id="hexo_博客已经完成的">hexo 博客已经完成的</h3><ul>
-<li>主题设置成了<a href="http://theme-next.iissnan.com/" target="_blank" rel="external"><code>Next:Mist</code></a></li>
-<li>标签,分类完成</li>
-<li>mathjax 完成学习, ($a = b + c$)</li>
-</ul>
-<h3 id="希望实现">希望实现</h3><ul>
-<li>考虑怎么把tag标签变好看一点</li>
-</ul>
-</span>
+        <span itemprop="articleBody"></span>
       
     </div>
 
     <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
-          
-        </div>
       
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/01/18/facebook-hacker-cup-round-1/" rel="next" title="facebook hacker cup round 1">
+                <i class="fa fa-chevron-left"></i> facebook hacker cup round 1
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/12/09/遗传算法解决N皇后/" rel="prev" title="遗传算法解决N皇后">
-                遗传算法解决N皇后 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -463,7 +413,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo安装"><span class="nav-number">1.</span> <span class="nav-text">hexo安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hexo建站"><span class="nav-number">2.</span> <span class="nav-text">hexo建站</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录文件说明"><span class="nav-number">3.</span> <span class="nav-text">目录文件说明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#_config-yml"><span class="nav-number">3.1.</span> <span class="nav-text">_config.yml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#package-json"><span class="nav-number">3.2.</span> <span class="nav-text">package.json</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scaffolds"><span class="nav-number">3.3.</span> <span class="nav-text">scaffolds</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#source"><span class="nav-number">3.4.</span> <span class="nav-text">source</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#themes"><span class="nav-number">3.5.</span> <span class="nav-text">themes</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客已经完成的和待完成的"><span class="nav-number">4.</span> <span class="nav-text">博客已经完成的和待完成的</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo_博客已经完成的"><span class="nav-number">4.1.</span> <span class="nav-text">hexo 博客已经完成的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#希望实现"><span class="nav-number">4.2.</span> <span class="nav-text">希望实现</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目錄</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
@@ -523,9 +473,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'stillkeeptry';
-      var disqus_identifier = '2015/11/28/hexo博客搭建/';
-      var disqus_title = 'hexo博客搭建';
-      var disqus_url = 'http://stillkeeptry.github.io/2015/11/28/hexo博客搭建/';
+      var disqus_identifier = '2016/01/19/机器学习-支持向量机/';
+      var disqus_title = '机器学习 -- 支持向量机';
+      var disqus_url = 'http://stillkeeptry.github.io/2016/01/19/机器学习-支持向量机/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
