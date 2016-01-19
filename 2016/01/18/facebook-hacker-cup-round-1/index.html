@@ -57,7 +57,7 @@
 <meta property="og:url" content="http://stillkeeptry.github.io/2016/01/18/facebook-hacker-cup-round-1/index.html">
 <meta property="og:site_name" content="StillKeepTry">
 <meta property="og:description" content="就是要水题, 说实在, 退役后, 手感一直好到爆, 我都不知道怎么回事?">
-<meta property="og:updated_time" content="2016-01-19T13:01:25.000Z">
+<meta property="og:updated_time" content="2016-01-19T13:02:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="facebook hacker cup round 1">
 <meta name="twitter:description" content="就是要水题, 说实在, 退役后, 手感一直好到爆, 我都不知道怎么回事?">
@@ -279,7 +279,7 @@
 <p>代码链接: <a href="http://paste.ubuntu.com/14565911/" target="_blank" rel="external">code</a></p>
 <h2 id="Yachtzee">Yachtzee</h2><p><strong>题意</strong>: 给你一个区间,你可以为这个区间取一个数作为你的钱,(可以为浮点数).然后给你N个步骤(每个步骤都要花钱,可能花的钱不一样),你要不停重复这N步,直到你无法走到下一步.问最后剩下的钱的期望.<br><strong>算法</strong>: 对于每个每个步骤,可以得到其一个范围,然后找在区间[A, B]之类占了多少.</p>
 <p>代码链接: <a href="http://paste.ubuntu.com/14565934/" target="_blank" rel="external">code</a></p>
-<h2 id="Boomerang_Tournament">Boomerang Tournament</h2><p><strong>题意</strong>: 给你一个$N<em>N$的矩阵,表示i对j的胜负情况,然后,N个人的比赛顺序不定,问每个人最好和最坏的情况.<br><em>*算法</em></em>: 首先,最坏情况,扫一遍就行了,最好情况的话,1,2,4,8我都是用的暴力搞一下,很快的,毕竟8!才四万多,然后,16的话,我用的很类似,但实际很慢的情况,就是用二进制存储这个状态下可能胜出的选手,复杂度达到 $C_{16}^8 C_8^4$, 但是一个大数据最多也就一秒.</p>
+<h2 id="Boomerang_Tournament">Boomerang Tournament</h2><p><strong>题意</strong>: 给你一个 $N*N$ 的矩阵,表示i对j的胜负情况,然后,N个人的比赛顺序不定,问每个人最好和最坏的情况.<br><strong>算法</strong>: 首先,最坏情况,扫一遍就行了,最好情况的话,1,2,4,8我都是用的暴力搞一下,很快的,毕竟8!才四万多,然后,16的话,我用的很类似,但实际很慢的情况,就是用二进制存储这个状态下可能胜出的选手,复杂度达到 $C_{16}^8 C_8^4$, 但是一个大数据最多也就一秒.</p>
 <p>代码链接: <a href="http://paste.ubuntu.com/14565984/" target="_blank" rel="external">code</a></p>
 </blockquote>
 </span>
