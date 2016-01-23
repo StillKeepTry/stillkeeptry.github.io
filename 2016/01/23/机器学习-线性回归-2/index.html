@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hadoop," />
+  <meta name="keywords" content="最小二乘法,机器学习," />
 
 
 
@@ -51,16 +51,16 @@
 
 
 
-<meta name="description" content="hadoop中mapreduce是肯定要用到的,那么如果我们想要对mapreduce产生的结果进行一个排序,该怎么操作呢?这里面就要用到一个二次排序(Secondary Sort).其实很简单,算是mapreduce的一个简单入门了.">
+<meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hadoop 二次排序">
-<meta property="og:url" content="http://stillkeeptry.github.io/2016/01/02/hadoop-二次排序/index.html">
+<meta property="og:title" content="机器学习 -- 线性回归 - 2 (最小二乘法)">
+<meta property="og:url" content="http://stillkeeptry.github.io/2016/01/23/机器学习-线性回归-2/index.html">
 <meta property="og:site_name" content="StillKeepTry">
-<meta property="og:description" content="hadoop中mapreduce是肯定要用到的,那么如果我们想要对mapreduce产生的结果进行一个排序,该怎么操作呢?这里面就要用到一个二次排序(Secondary Sort).其实很简单,算是mapreduce的一个简单入门了.">
-<meta property="og:updated_time" content="2016-01-03T15:41:01.000Z">
+<meta property="og:description">
+<meta property="og:updated_time" content="2016-01-23T14:30:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hadoop 二次排序">
-<meta name="twitter:description" content="hadoop中mapreduce是肯定要用到的,那么如果我们想要对mapreduce产生的结果进行一个排序,该怎么操作呢?这里面就要用到一个二次排序(Secondary Sort).其实很简单,算是mapreduce的一个简单入门了.">
+<meta name="twitter:title" content="机器学习 -- 线性回归 - 2 (最小二乘法)">
+<meta name="twitter:description">
 
 
 
@@ -72,7 +72,7 @@
   };
 </script>
 
-  <title> hadoop 二次排序 | StillKeepTry </title>
+  <title> 机器学习 -- 线性回归 - 2 (最小二乘法) | StillKeepTry </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -212,7 +212,7 @@
             
             
               
-                hadoop 二次排序
+                机器学习 -- 线性回归 - 2 (最小二乘法)
               
             
           </h1>
@@ -221,8 +221,8 @@
         <div class="post-meta">
           <span class="post-time">
             發表於
-            <time itemprop="dateCreated" datetime="2016-01-02T14:57:25+08:00" content="2016-01-02">
-              2016-01-02
+            <time itemprop="dateCreated" datetime="2016-01-23T22:29:17+08:00" content="2016-01-23">
+              2016-01-23
             </time>
           </span>
 
@@ -231,8 +231,8 @@
               &nbsp; | &nbsp; 分類於
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hadoop/" itemprop="url" rel="index">
-                    <span itemprop="name">hadoop</span>
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
                   </a>
                 </span>
 
@@ -247,8 +247,8 @@
             
               <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/01/02/hadoop-二次排序/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/02/hadoop-二次排序/" itemprop="commentsCount"></span>
+              <a href="/2016/01/23/机器学习-线性回归-2/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/23/机器学习-线性回归-2/" itemprop="commentsCount"></span>
               </a>
             </span>
             
@@ -267,65 +267,7 @@
       
 
       
-        <span itemprop="articleBody"><p>hadoop中mapreduce是肯定要用到的,那么如果我们想要对mapreduce产生的结果进行一个排序,该怎么操作呢?这里面就要用到一个二次排序(Secondary Sort).其实很简单,算是mapreduce的一个简单入门了.</p>
-<a id="more"></a>
-<p>让我们看看quora中,大家对Secondary Sort的一个定义</p>
-<blockquote>
-<p><strong>Secondary sort is a technique that allows the MapReduce programmer to control the order that the values show up within a reduce function call.</strong></p>
-<p>给一个更通俗的说明吧, hadoop通常是默认按Key排序,但是在同一键中,却无法对value排序,所以,使用二次排序能够保证到.</p>
-<p>让我们来一个问题, WordCount 统计过后,按照Value排序,那么数据可能是这样的</p>
-<table>
-<thead>
-<tr>
-<th>单词</th>
-<th style="text-align:right">数量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a</td>
-<td style="text-align:right">10</td>
-</tr>
-<tr>
-<td>b</td>
-<td style="text-align:right">5</td>
-</tr>
-<tr>
-<td>c</td>
-<td style="text-align:right">7</td>
-</tr>
-</tbody>
-</table>
-<p>那么我们的目标就是希望把他按照这个顺序</p>
-<table>
-<thead>
-<tr>
-<th>单词</th>
-<th style="text-align:right">数量</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>a</td>
-<td style="text-align:right">10</td>
-</tr>
-<tr>
-<td>c</td>
-<td style="text-align:right">7</td>
-</tr>
-<tr>
-<td>b</td>
-<td style="text-align:right">5</td>
-</tr>
-</tbody>
-</table>
-<p>其实也就是我们想按照这个给他一个自定义的排序,但是,很明显,数量不能当做键,因为重复太多了把(其实也可以的)</p>
-<p>所以我们需要重新定义一个MapKey类,需要他implements WritableComparable </p>
-<p>除此之外,还需要实现一个 WritableComparator, 用于你想要的排序,就是对Value,当然也可以对把Value放到Key中,设置你想要的.不过那样就只允许一种了.</p>
-<p>在WordCount中,即需要统计词频,还需要实现排序,所以,我们采用两种job任务.</p>
-<p>参考代码 (太长了): <a href="http://paste.ubuntu.com/14387402/" target="_blank" rel="external"><code>代码链接</code></a></p>
-</blockquote>
-<hr>
+        <span itemprop="articleBody"><a id="more"></a>
 </span>
       
     </div>
@@ -334,7 +276,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hadoop/" rel="tag">#hadoop</a>
+            <a href="/tags/最小二乘法/" rel="tag">#最小二乘法</a>
+          
+            <a href="/tags/机器学习/" rel="tag">#机器学习</a>
           
         </div>
       
@@ -343,17 +287,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/12/28/机器学习-逻辑回归/" rel="next" title="机器学习 -- 逻辑回归">
-                <i class="fa fa-chevron-left"></i> 机器学习 -- 逻辑回归
+              <a href="/2016/01/19/机器学习-支持向量机/" rel="next" title="机器学习 -- 支持向量机">
+                <i class="fa fa-chevron-left"></i> 机器学习 -- 支持向量机
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/14/facebook-hacker-cup-qualification-round/" rel="prev" title="facebook hacker cup qualification round">
-                facebook hacker cup qualification round <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -557,9 +497,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'stillkeeptry';
-      var disqus_identifier = '2016/01/02/hadoop-二次排序/';
-      var disqus_title = 'hadoop 二次排序';
-      var disqus_url = 'http://stillkeeptry.github.io/2016/01/02/hadoop-二次排序/';
+      var disqus_identifier = '2016/01/23/机器学习-线性回归-2/';
+      var disqus_title = '机器学习 -- 线性回归 - 2 (最小二乘法)';
+      var disqus_url = 'http://stillkeeptry.github.io/2016/01/23/机器学习-线性回归-2/';
 
       function run_disqus_script(disqus_script){
         var dsq = document.createElement('script');
