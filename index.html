@@ -197,6 +197,15 @@
 
     
     
+      
+      
+        
+        
+        
+      
+
+      
+    
 
     
       
@@ -231,7 +240,7 @@
         <div class="post-meta">
           <span class="post-time">
             發表於
-            <time itemprop="dateCreated" datetime="2016-01-23T22:29:17+08:00" content="2016-01-23">
+            <time itemprop="dateCreated" datetime="2016-01-23T22:29:00+08:00" content="2016-01-23">
               2016-01-23
             </time>
           </span>
@@ -281,6 +290,16 @@
           <span itemprop="articleBody">
             
               <a id="more"></a>
+<blockquote>
+<p>本文主要推导一下,线性回归中的最小二乘法的解法</p>
+<p>最小二乘法是指损失函数是以最小二乘的方式,让其梯度下降为0.主要过程还是在于推导其梯度下降的数学过程.</p>
+<p>最小二乘的损失函数如下:</p>
+<p>$J(k) = \frac{1}{2} \sum_{i=1}^{m} (h_k (x^i) - y^i)^2 = \frac{1}{2} (X k - Y)^{T} (X k - Y)$</p>
+<p>这里面需要引入一些矩阵的知识,主要是利用矩阵的秩 $tr$</p>
+<p>这里由于格式问题,我们用 $k = \theta$ 表示</p>
+<p>${\nabla}_k J(k) = \frac{1}{2} {\nabla}_k (X k - Y)^T (X k - Y)$</p>
+</blockquote>
+<hr>
 
             
           </span>
@@ -762,7 +781,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">標籤</span>
               </a>
           </div>
