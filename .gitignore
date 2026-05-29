@@ -1,0 +1,21 @@
+Here is the .gitignore file for your project.
+
+Create a file named .gitignore in the root directory of your Hugo project (the same folder where your hugo.toml or hugo.yml lives) and paste the following contents into it:
+
+Plaintext
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Hugo build directories
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Local development environment
+.env
