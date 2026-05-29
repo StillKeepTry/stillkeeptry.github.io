@@ -1,4 +1,4 @@
-baseURL = 'https://<your-github-username>.github.io/'
+baseURL = 'https://stillkeeptry.github.io/'
 title = 'My Tech Blog & Bio'
 theme = 'PaperMod'
 
@@ -24,15 +24,15 @@ enableEmoji = true
     
     [[params.profileMode.buttons]]
       name = "GitHub"
-      url = "https://github.com/your-username"
+      url = "https://github.com/StillKeepTry"
 
   # Social symbols displayed on your profile page
   [[params.socialIcons]]
     name = "github"
-    url = "https://github.com/your-username"
+    url = "https://github.com/StillKeepTry"
   [[params.socialIcons]]
     name = "twitter"
-    url = "https://x.com/your-username"
+    url = "https://x.com/SongKaitao"
 
 [[menu.main]]
   name = "Archive"
