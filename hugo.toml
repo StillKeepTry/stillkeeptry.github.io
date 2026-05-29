@@ -1,3 +1,45 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = 'https://<your-github-username>.github.io/'
+title = 'My Tech Blog & Bio'
+theme = 'PaperMod'
+
+# Enable emojis in markdown
+enableEmoji = true
+
+[params]
+  env = 'production'
+  title = 'My Tech Blog & Bio'
+  description = 'Welcome to my personal tech blog and resume site.'
+  author = 'Your Name'
+
+  # Profile Mode (Perfect for your personal intro homepage)
+  [params.profileMode]
+    enabled = true
+    title = "Hi there, I'm Your Name 👋"
+    subtitle = "Full-stack developer | Tech blogger | Open-source enthusiast"
+    imageUrl = "https://via.placeholder.com/150" # Replace with your avatar URL
+    
+    [[params.profileMode.buttons]]
+      name = "Read Blog"
+      url = "posts/"
+    
+    [[params.profileMode.buttons]]
+      name = "GitHub"
+      url = "https://github.com/your-username"
+
+  # Social symbols displayed on your profile page
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/your-username"
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://x.com/your-username"
+
+[[menu.main]]
+  name = "Archive"
+  url = "archives/"
+  weight = 10
+
+[[menu.main]]
+  name = "Tags"
+  url = "tags/"
+  weight = 20
