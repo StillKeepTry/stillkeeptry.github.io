@@ -1,0 +1,66 @@
+baseURL = "https://USERNAME.github.io/"
+languageCode = "en-us"
+title = "Your Name"
+theme = "PaperMod"
+
+[pagination]
+pagerSize = 5
+
+[params]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowCodeCopyButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+
+[params.profileMode]
+  enabled = true
+  title = "Your Name"
+  subtitle = "Research Scientist | Large Language Models | AI Agents | NLP"
+  imageUrl = "images/profile.jpg"
+  imageWidth = 160
+  imageHeight = 160
+
+  [[params.profileMode.buttons]]
+    name = "Publications"
+    url = "/publications/"
+
+  [[params.profileMode.buttons]]
+    name = "Projects"
+    url = "/projects/"
+
+  [[params.profileMode.buttons]]
+    name = "CV"
+    url = "/cv/"
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/USERNAME"
+
+[[params.socialIcons]]
+  name = "googlescholar"
+  url = "https://scholar.google.com/citations?user=YOUR_ID"
+
+[[params.socialIcons]]
+  name = "email"
+  url = "mailto:you@example.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "publications"
+    name = "Publications"
+    url = "/publications/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "cv"
+    name = "CV"
+    url = "/cv/"
+    weight = 30
