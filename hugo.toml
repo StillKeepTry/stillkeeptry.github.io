@@ -36,11 +36,11 @@ pagerSize = 5
 
 [[params.socialIcons]]
   name = "github"
-  url = "https://github.com/USERNAME"
+  url = "https://github.com/stillkeeptry"
 
 [[params.socialIcons]]
   name = "googlescholar"
-  url = "https://scholar.google.com/citations?user=YOUR_ID"
+  url = "https://scholar.google.com.hk/citations?user=LLk9dR8AAAAJ"
 
 [[params.socialIcons]]
   name = "email"
