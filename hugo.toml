@@ -43,8 +43,12 @@ pagerSize = 5
   url = "https://scholar.google.com.hk/citations?user=LLk9dR8AAAAJ"
 
 [[params.socialIcons]]
-  name = "email"
-  url = "mailto:you@example.com"
+  name = "x"
+  url = "https://x.com/SongKaitao"
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/kaitao-song-720147b7/"
 
 [menu]
   [[menu.main]]
