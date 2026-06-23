@@ -1,6 +1,6 @@
 baseURL = "https://USERNAME.github.io/"
 languageCode = "en-us"
-title = "Your Name"
+title = "Kaitao Song"
 theme = "PaperMod"
 
 [pagination]
@@ -16,7 +16,7 @@ pagerSize = 5
 
 [params.profileMode]
   enabled = true
-  title = "Your Name"
+  title = "Kaitao Song"
   subtitle = "Research Scientist | Large Language Models | AI Agents | NLP"
   imageUrl = "images/profile.jpg"
   imageWidth = 160
@@ -31,8 +31,8 @@ pagerSize = 5
     url = "/projects/"
 
   [[params.profileMode.buttons]]
-    name = "CV"
-    url = "/cv/"
+    name = "About Me"
+    url = "/about/"
 
 [[params.socialIcons]]
   name = "github"
@@ -52,6 +52,12 @@ pagerSize = 5
 
 [menu]
   [[menu.main]]
+    identifier = "about"
+    name = "About Me"
+    url = "/about/"
+    weight = 5
+
+  [[menu.main]]
     identifier = "publications"
     name = "Publications"
     url = "/publications/"
@@ -62,9 +68,3 @@ pagerSize = 5
     name = "Projects"
     url = "/projects/"
     weight = 20
-
-  [[menu.main]]
-    identifier = "cv"
-    name = "CV"
-    url = "/cv/"
-    weight = 30
