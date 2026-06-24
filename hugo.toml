@@ -18,7 +18,7 @@ pagerSize = 5
   enabled = true
   title = "Kaitao Song"
   subtitle = "Research Scientist | Large Language Models | AI Agents | NLP"
-  imageUrl = "images/profile.jpg"
+  imageUrl = "icon.png"
   imageWidth = 160
   imageHeight = 160
 
