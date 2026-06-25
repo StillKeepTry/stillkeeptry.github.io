@@ -17,7 +17,7 @@ pagerSize = 5
 [params.profileMode]
   enabled = true
   title = "Kaitao Song"
-  subtitle = "Research Scientist | Large Language Models | AI Agents | NLP"
+  subtitle = "Senior Research Scientist @ Apple <br> Foundation Models | Large Language Models | AI Agents"
   imageUrl = "icon.png"
   imageWidth = 160
   imageHeight = 160
