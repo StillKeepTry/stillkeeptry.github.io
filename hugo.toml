@@ -6,6 +6,9 @@ theme = "PaperMod"
 [pagination]
 pagerSize = 5
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [params]
   defaultTheme = "auto"
   ShowReadingTime = true
@@ -23,16 +26,16 @@ pagerSize = 5
   imageHeight = 160
 
   [[params.profileMode.buttons]]
+    name = "About Me"
+    url = "/about/"
+
+  [[params.profileMode.buttons]]
     name = "Publications"
     url = "/publications/"
 
   [[params.profileMode.buttons]]
     name = "Projects"
     url = "/projects/"
-
-  [[params.profileMode.buttons]]
-    name = "About Me"
-    url = "/about/"
 
 [[params.socialIcons]]
   name = "github"
