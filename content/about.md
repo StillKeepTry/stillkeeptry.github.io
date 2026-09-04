@@ -26,6 +26,22 @@ Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/kaitao-song-72
       <span class="experience-title">Senior Researcher · July 2021 – May 2025</span>
     </span>
   </li>
+
+  <li class="experience-item">
+    <img class="experience-logo" src="/images/microsoft_logo.jpeg" alt="Microsoft logo">
+    <span class="experience-info">
+      <span class="experience-company">Microsoft Research Asia</span>
+      <span class="experience-title">Research Intern · May 2019 – Nov 2019</span>
+    </span>
+  </li>
+
+  <li class="experience-item">
+    <img class="experience-logo" src="/images/microsoft_logo.jpeg" alt="Microsoft logo">
+    <span class="experience-info">
+      <span class="experience-company">Microsoft Research Asia</span>
+      <span class="experience-title">Research Intern · Nov 2016 – Sep 2017</span>
+    </span>
+  </li>
 </ul>
 
 ## Education
@@ -35,14 +51,14 @@ Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/kaitao-song-72
     <img class="experience-logo" src="/images/njust_logo.jpeg" alt="Nanjing University of Science and Technology logo">
     <span class="experience-info">
       <span class="experience-company">Nanjing University of Science and Technology</span>
-      <span class="experience-title">Ph.D. · received 2021</span>
+      <span class="experience-title">Ph.D. · 2015.9 ~ 2021.6 </span>
     </span>
   </li>
   <li class="experience-item">
     <img class="experience-logo" src="/images/njust_logo.jpeg" alt="Nanjing University of Science and Technology logo">
     <span class="experience-info">
       <span class="experience-company">Nanjing University of Science and Technology</span>
-      <span class="experience-title">B.S. · received 2015</span>
+      <span class="experience-title">B.S. · 2011.9 ~ 2015.6 </span>
     </span>
   </li>
 </ul>
