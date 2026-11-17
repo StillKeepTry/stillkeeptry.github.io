@@ -37,6 +37,10 @@ pagerSize = 5
     name = "Projects"
     url = "/projects/"
 
+  [[params.profileMode.buttons]]
+    name = "Blogs"
+    url = "/blogs/"
+
 [[params.socialIcons]]
   name = "github"
   url = "https://github.com/stillkeeptry"
@@ -71,3 +75,9 @@ pagerSize = 5
     name = "Projects"
     url = "/projects/"
     weight = 20
+
+  [[menu.main]]
+    identifier = "blogs"
+    name = "Blogs"
+    url = "/blogs/"
+    weight = 30
