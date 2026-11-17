@@ -111,6 +111,10 @@ title = 'Publications'
 
 ## Survey
 
+- **Reward Hacking in the Era of Large Models: Mechanisms, Emergent Misalignment, Challenges**.<br>
+  Xiaohua Wang, Muzhao Tian, Yuqi Zeng, Zisu Huang, Jiakang Yuan, Bowen Chen, Jingwen Xu, Mingbo Zhou, Wenhao Liu, Muling Wu, Zhengkang Guo, Qi Qian, Yifei Wang, Feiran Zhang, Ruicheng Yin, Shihan Dou, Changze Lv, Tao Chen, **Kaitao Song**, Xu Tan, Tao Gui, Xiaoqing Zheng, Xuanjing Huang.<br>
+  *Preprint.*
+
 - **Advances and Challenges in Foundation Agents: From Brain-Inspired Intelligence to Evolutionary, Collaborative, and Safe Systems**.<br>
   Bang Liu\*, Xinfeng Li\*, Jiayi Zhang\*, Jinlin Wang\*, Tanjin He\*, Sirui Hong\*, Hongzhang Liu\*, Shaokun Zhang\*, **Kaitao Song**\*, Kunlun Zhu\*, Yuheng Cheng\*, Suyuchen Wang\*, et al.<br>
   *Preprint.*
