@@ -12,6 +12,7 @@ title = 'Publications'
 .pubs-toggle { display: flex; gap: 0.5rem; margin: 1rem 0; }
 .pubs-toggle button { cursor: pointer; padding: 0.3rem 0.9rem; border-radius: 6px; border: 1px solid var(--border); background: var(--entry); color: var(--secondary); font-size: 0.9rem; }
 .pubs-toggle button.active { background: var(--primary); color: var(--theme); border-color: var(--primary); }
+.award { color: #d62728; }
 </style>
 <script src="/js/publications.js" defer></script>
 
@@ -35,11 +36,11 @@ title = 'Publications'
 
 - **PVTv2: Improved Baselines with Pyramid Vision Transformer**.<br>
   Wenhai Wang, Enze Xie, Xiang Li, Deng-Ping Fan, **Kaitao Song**, Ding Liang, Tong Lu, Ping Luo, Ling Shao.<br>
-  *Computational Visual Media (CVM), 2022, **Honorable Mention Award**.*
+  *Computational Visual Media (CVM), 2022, <strong class="award">Honorable Mention Award</strong>.*
 
 - **Pyramid Vision Transformer: A Versatile Backbone for Dense Prediction without Convolutions**.<br>
   Wenhai Wang, Enze Xie, Xiang Li, Deng-Ping Fan, **Kaitao Song**, Ding Liang, Tong Lu, Ping Luo, Ling Shao.<br>
-  *ICCV 2021, **Most Influential Papers (Rank 2)**.*
+  *ICCV 2021, <strong class="award">Most Influential Papers (Rank 2)</strong>.*
 
 - **MPNet: Masked and Permuted Pre-training for Language Understanding**.<br>
   **Kaitao Song**, Xu Tan, Tao Qin, Jianfeng Lu, Tie-Yan Liu.<br>
@@ -47,7 +48,7 @@ title = 'Publications'
 
 - **MASS: Masked Sequence to Sequence Pre-training for Language Generation**.<br>
   **Kaitao Song**, Xu Tan, Tao Qin, Jianfeng Lu, Tie-Yan Liu.<br>
-  *ICML 2019, **Most Influential Papers (Rank 9)**.*
+  *ICML 2019, <strong class="award">Most Influential Papers (Rank 9)</strong>.*
 
 ## Reasoning
 
@@ -61,7 +62,7 @@ title = 'Publications'
 
 - **Learning To Teach Large Language Models Logical Reasoning**.<br>
   Meiqi Chen, Yubo Ma, **Kaitao Song**<sup>#</sup>, Yixin Cao, Yan Zhang, Dongsheng Li.<br>
-  *ACL 2024, **Oral**.*
+  *ACL 2024, <strong class="award">Oral</strong>.*
 
 - **Mind the Gap: Bridging Thought Leap for Improved Chain-of-Thought Tuning**.<br>
   Haolei Xu, Yuchen Yan, Yongliang Shen, Wenqi Zhang, Guiyang Hou, Shengpei Jiang, **Kaitao Song**, Weiming Lu, Jun Xiao, Yueting Zhuang.<br>
@@ -103,7 +104,7 @@ title = 'Publications'
 
 - **HuggingGPT: Solving AI Tasks with ChatGPT and Its Friends in Hugging Face**.<br>
   Yongliang Shen\*, **Kaitao Song**\*<sup>,#</sup>, Xu Tan, Dongsheng Li, Weiming Lu, Yueting Zhuang.<br>
-  *NeurIPS 2023, **Most Influential Papers (Rank 8)**.* [[paper]](https://arxiv.org/pdf/2303.17580.pdf) [[code]](https://github.com/microsoft/JARVIS/) [[demo]](https://huggingface.co/spaces/microsoft/HuggingGPT)
+  *NeurIPS 2023, <strong class="award">Most Influential Papers (Rank 8)</strong>.* [[paper]](https://arxiv.org/pdf/2303.17580.pdf) [[code]](https://github.com/microsoft/JARVIS/) [[demo]](https://huggingface.co/spaces/microsoft/HuggingGPT)
 
 - **MusicAgent: An AI Agent for Music Understanding and Generation with Large Language Models**.<br>
   Dingyao Yu, **Kaitao Song**\*<sup>,#</sup>, Peiling Lu, Tianyu He, Xu Tan, Wei Ye, Shikun Zhang, Jiang Bian.<br>
@@ -173,7 +174,7 @@ title = 'Publications'
 
 - **NaturalSpeech 3: Zero-Shot Speech Synthesis with Factorized Codec and Diffusion Models**.<br>
   Zeqian Ju, Yuancheng Wang, Kai Shen, Xu Tan, Detai Xin, Dongchao Yang, Yanqing Liu, Yichong Leng, **Kaitao Song**, Siliang Tang, Zhizheng Wu, Tao Qin, Xiang-Yang Li, Wei Ye, Shikun Zhang, Jiang Bian, Lei He, Jinyu Li, Sheng Zhao.<br>
-  *ICML 2024, **Oral**.*
+  *ICML 2024, <strong class="award">Oral</strong>.*
 
 - **PromptTTS 2: Describing and Generating Voices with Text Prompt**.<br>
   Yichong Leng, Zhifang Guo, Kai Shen, Xu Tan, Zeqian Ju, Yanqing Liu, Yufei Liu, Dongchao Yang, Leying Zhang, **Kaitao Song**, Lei He, Xiang-Yang Li, Sheng Zhao, Tao Qin, Jiang Bian.<br>
@@ -193,7 +194,7 @@ title = 'Publications'
 
 - **SoftCorrect: Error Correction with Soft Detection for Automatic Speech Recognition**.<br>
   Yichong Leng, Xu Tan, Wenjie Liu, **Kaitao Song**, Rui Wang, Xiang-Yang Li, Tao Qin, Edward Lin, Tie-Yan Liu.<br>
-  *AAAI 2023, **Oral**.*
+  *AAAI 2023, <strong class="award">Oral</strong>.*
 
 - **Improving Hypernasality Estimation with Automatic Speech Recognition in Cleft Palate Speech**.<br>
   **Kaitao Song**, Teng Wan, Bixia Wang, Huiqiang Jiang, Luna Qiu, Jiahang Xu, Liping Jiang, Qun Lou, Yuqing Yang, Dongsheng Li, Xudong Wang, Lili Qiu.<br>
