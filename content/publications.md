@@ -8,23 +8,18 @@ title = 'Publications'
 * = equal contribution &nbsp;&middot;&nbsp; # = corresponding author. See also my <a href="https://scholar.google.com/citations?user=LLk9dR8AAAAJ&hl=en">Google Scholar</a>.
 </p>
 
+<style>
+.pubs-toggle { display: flex; gap: 0.5rem; margin: 1rem 0; }
+.pubs-toggle button { cursor: pointer; padding: 0.3rem 0.9rem; border-radius: 6px; border: 1px solid var(--border); background: var(--entry); color: var(--secondary); font-size: 0.9rem; }
+.pubs-toggle button.active { background: var(--primary); color: var(--theme); border-color: var(--primary); }
+</style>
+<script src="/js/publications.js" defer></script>
+
 ## Foundation Model
 
 - **Chain-of-Model Learning for Language Model**.<br>
   **Kaitao Song**\*<sup>,#</sup>, Xiaohua Wang\*, Xu Tan\*, Huiqiang Jiang, Chengruidong Zhang, Yongliang Shen, Cen Lu, Zihao Li, Zifan Song, Caihua Shan, Yansen Wang, Kan Ren, Xiaoqing Zheng, Tao Qin, Yuqing Yang, Dongsheng Li, Lili Qiu.<br>
   *NeurIPS 2025.*
-
-- **Let LLMs Break Free from Overthinking via Self-Braking Tuning**.<br>
-  Haoran Zhao, Yuchen Yan, Yongliang Shen, Haolei Xu, Wenqi Zhang, **Kaitao Song**, Jian Shao, Weiming Lu, Jun Xiao, Yueting Zhuang.<br>
-  *NeurIPS 2025.*
-
-- **Mind the Gap: Bridging Thought Leap for Improved Chain-of-Thought Tuning**.<br>
-  Haolei Xu, Yuchen Yan, Yongliang Shen, Wenqi Zhang, Guiyang Hou, Shengpei Jiang, **Kaitao Song**, Weiming Lu, Jun Xiao, Yueting Zhuang.<br>
-  *NeurIPS 2025.*
-
-- **Learning To Teach Large Language Models Logical Reasoning**.<br>
-  Meiqi Chen, Yubo Ma, **Kaitao Song**<sup>#</sup>, Yixin Cao, Yan Zhang, Dongsheng Li.<br>
-  *ACL 2024, **Oral**.*
 
 - **Connecting Large Language Models with Evolutionary Algorithms Yields Powerful Prompt Optimizers**.<br>
   Qingyan Guo, Rui Wang, Junliang Guo, Bei Li, **Kaitao Song**, Xu Tan, Guoqing Liu, Jiang Bian, Yujiu Yang.<br>
@@ -54,11 +49,29 @@ title = 'Publications'
   **Kaitao Song**, Xu Tan, Tao Qin, Jianfeng Lu, Tie-Yan Liu.<br>
   *ICML 2019, **Most Influential Papers (Rank 9)**.*
 
-## AI Agent
+## Reasoning
+
+- **From Outcome to Representation: Tracing Reasoning Mechanisms through Integrated Policy Gradient**.<br>
+  Changming Li, Kaixing Zhang, Yingdong Shi, Haoyun Xu, Zheng Zhang, **Kaitao Song**, Kan Ren.<br>
+  *NeurIPS 2026.*
 
 - **Foresight Optimization for Strategic Reasoning in Large Language Models**.<br>
   Jiashuo Wang, Jiawen Duan, Jian Wang, **Kaitao Song**, Chunpu Xu, Johnny KW Ho, Fenggang Yu, Wenjie Li, Johan F Hoorn.<br>
   *ACL 2026.*
+
+- **Learning To Teach Large Language Models Logical Reasoning**.<br>
+  Meiqi Chen, Yubo Ma, **Kaitao Song**<sup>#</sup>, Yixin Cao, Yan Zhang, Dongsheng Li.<br>
+  *ACL 2024, **Oral**.*
+
+- **Mind the Gap: Bridging Thought Leap for Improved Chain-of-Thought Tuning**.<br>
+  Haolei Xu, Yuchen Yan, Yongliang Shen, Wenqi Zhang, Guiyang Hou, Shengpei Jiang, **Kaitao Song**, Weiming Lu, Jun Xiao, Yueting Zhuang.<br>
+  *NeurIPS 2025.*
+
+- **Let LLMs Break Free from Overthinking via Self-Braking Tuning**.<br>
+  Haoran Zhao, Yuchen Yan, Yongliang Shen, Haolei Xu, Wenqi Zhang, **Kaitao Song**, Jian Shao, Weiming Lu, Jun Xiao, Yueting Zhuang.<br>
+  *NeurIPS 2025.*
+
+## AI Agent
 
 - **UI-Copilot: Advancing Long-Horizon GUI Automation via Tool-Integrated Policy Optimization**.<br>
   Zhengxi Lu, Fei Tang, Guangyi Liu, **Kaitao Song**, Xu Tan, Jin Ma, Wenqi Zhang, Weiming Lu, Jun Xiao, Yueting Zhuang, Yongliang Shen.<br>
